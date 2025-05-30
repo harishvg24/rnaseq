@@ -3,14 +3,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-## Table of Contents
-
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Pipeline Flowchart](#pipeline-flowchart)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Description
 
@@ -23,15 +15,9 @@ This project provides a comprehensive pipeline for RNA sequencing data analysis,
 
 ## Installation
 
-> Provide detailed instructions on how to install the project. Include any prerequisites or dependencies.
-
-1.  Clone the repository:
-
-    bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Linux/macOS
-    # venv\Scripts\activate  # On Windows
-    4.  Prepare your input data:
+download the setup.sh and make it executable using command chmod +x setup.sh and run the command ./setup.sh for downloading all the required tools
+    
+ 1. Prepare your input data:
 
     > Input data should be placed in the `data/raw` directory. The pipeline expects FASTQ files for each sample. Describe the expected file naming convention. For example: The pipeline expects paired-end reads with filenames like `sample1_R1.fastq.gz` and `sample1_R2.fastq.gz`.
 
@@ -43,12 +29,10 @@ This project provides a comprehensive pipeline for RNA sequencing data analysis,
     └── sample2_R2.fastq.gz
         The pipeline is configured using a `config.yaml` file. This file specifies the paths to input data, genome index, and other parameters.
 
-    > Example `config.yaml`:
-    bash
-    # Example command to execute the main script
-    python rnaseq_pipeline.py --config config.yaml
-        >  Explain any command-line arguments or options.
 
+    # Example command to execute the main script
+    bash rnaseq_pipeline.sh --config config.yaml
+    
 2.  Interpret the results:
 
     > Results are stored in the `results` directory. Key output files include:
